@@ -30,7 +30,7 @@ const Product = () => {
   return (
     <PageProduct>
       <LinkHome>
-        <Link to="/">
+        <Link to="/StoreParts/">
           <FaArrowLeft size={32} />
         </Link>
       </LinkHome>

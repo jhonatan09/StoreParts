@@ -18,7 +18,7 @@ const HomePage = () => {
 
   const test = data.map((item: responseTypes) => {
     return (
-      <Link to="/product" state={item}>
+      <Link to="/StoreParts/product" state={item}>
         <Content name={item.name} price={item.price} type={item.type} />
       </Link>
     );

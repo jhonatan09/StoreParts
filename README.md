@@ -1,4 +1,4 @@
-# Project React Store Parts wih TypeScript, Context and Hooks
+# Project React Store Parts with TypeScript, Context and Hooks
 
 # Image this project:
 
@@ -22,3 +22,6 @@
 
     Install node_modules: npm install
     For execute: npm start
+
+\*\*warning
+In order for the routes to work perfectly, it is necessary to remove "StoreParts" from all routers, for the main route it will look like this "/" and for the product route "/product"
