@@ -20,6 +20,7 @@
 
 # what's needed for run that project:
 
+    Need to do clone the another repo https://github.com/Mozantech/store-parts-exercise and execute show the data api.
     Install node_modules: npm install
     For execute: npm start
 
