@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/StoreParts/static/css/main.cd49b365.css",
-    "main.js": "/StoreParts/static/js/main.ea97f9dd.js",
+    "main.js": "/StoreParts/static/js/main.de78ec90.js",
     "static/js/787.c400f5d9.chunk.js": "/StoreParts/static/js/787.c400f5d9.chunk.js",
     "index.html": "/StoreParts/index.html",
     "main.cd49b365.css.map": "/StoreParts/static/css/main.cd49b365.css.map",
-    "main.ea97f9dd.js.map": "/StoreParts/static/js/main.ea97f9dd.js.map",
+    "main.de78ec90.js.map": "/StoreParts/static/js/main.de78ec90.js.map",
     "787.c400f5d9.chunk.js.map": "/StoreParts/static/js/787.c400f5d9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd49b365.css",
-    "static/js/main.ea97f9dd.js"
+    "static/js/main.de78ec90.js"
   ]
 }
