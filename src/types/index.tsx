@@ -12,6 +12,8 @@ export interface AppContextInterface {
   crescentSort(): any;
   decrescentSort(): any;
   setChangeState: React.Dispatch<SetStateAction<boolean>>;
+  loading: boolean;
+  setLoading: (newState: boolean) => void;
 }
 export interface Props {
   children: ReactNode;

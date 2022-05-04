@@ -22,6 +22,17 @@ const LinkHome = styled.div`
   margin-top: 16px;
 `;
 
+const EmptyContent = styled.h2`
+  width: 100%;
+  margin: 5% auto;
+  color: #0892e3;
+  text-align: center;
+  font-family: cursive;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+`;
+
 const Product = () => {
   const location = useLocation();
 
@@ -37,7 +48,7 @@ const Product = () => {
       {state !== null ? (
         <Content name={state.name} price={state.price} type={state.type} />
       ) : (
-        "hahahahahahaha"
+        <EmptyContent>Need choose a item first</EmptyContent>
       )}
     </PageProduct>
   );

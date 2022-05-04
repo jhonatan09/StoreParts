@@ -3,7 +3,7 @@ import { DataContext } from "../../store";
 import { responseTypes } from "../../types";
 import Content from "../../component/Content";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Home = styled.div`
   width: 100%;
@@ -13,8 +13,25 @@ const Home = styled.div`
   flex-wrap: wrap;
 `;
 
+const colors = keyframes`
+  0% { opacity: 0.1;}
+  30% {opacity: 0.3;}
+  60% {opacity: 0.6;}
+  100% { opacity: 0.9; }
+`;
+
+const LoaderMsg = styled.h2`
+  width: 100%;
+  margin: 5% auto;
+  color: #ff0000;
+  animation: ${colors} 2s linear infinite;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+`;
+
 const HomePage = () => {
-  const { data } = useContext(DataContext);
+  const { data, loading } = useContext(DataContext);
 
   const test = data.map((item: responseTypes) => {
     return (
@@ -23,7 +40,7 @@ const HomePage = () => {
       </Link>
     );
   });
-  return <Home>{test}</Home>;
+  return <Home>{loading ? <LoaderMsg>Loading...</LoaderMsg> : test}</Home>;
 };
 
 export default HomePage;

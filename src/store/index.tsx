@@ -15,13 +15,13 @@ function DataContextProvider({ children }: Props) {
   const [selected, setSelected] = useState<string>("");
 
   const [changeState, setChangeState] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const [btnSort, setBtnSort] = useState<boolean>(true);
 
-  const [cres, setCres] = useState<any>();
-
   const handleClick = () => {
     setChangeState((statePrev) => !statePrev);
+    setLoading(true);
     setSelected("");
   };
 
@@ -46,6 +46,7 @@ function DataContextProvider({ children }: Props) {
   useEffect(() => {
     api.get(`store/parts?type=${input || selected}`).then((response) => {
       setData(response.data);
+      setLoading(false);
     });
   }, [changeState]);
 
@@ -63,6 +64,8 @@ function DataContextProvider({ children }: Props) {
         crescentSort,
         decrescentSort,
         setChangeState,
+        loading,
+        setLoading,
       }}
     >
       {children}

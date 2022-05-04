@@ -13,6 +13,9 @@ const Container = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   padding-bottom: 8px;
+  @media (max-width: 767px) {
+    height: 240px;
+  }
 `;
 const Button = styled.button`
   width: 80px;
@@ -58,6 +61,9 @@ const InsideContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const SearchBar = styled.div`
@@ -65,10 +71,14 @@ const SearchBar = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 4%;
+  }
 `;
 
 const Select = styled.select`
-  width: 170px;
+  width: 175px;
   height: 35px;
   border: 5px solid #00629b;
   border-radius: 15px;
@@ -76,6 +86,7 @@ const Select = styled.select`
   font-size: 16px;
   font-weight: 600;
   color: #0892e3;
+  font-family: cursive;
 `;
 
 const Header = () => {
@@ -88,6 +99,7 @@ const Header = () => {
     decrescentSort,
     btnSort,
     setChangeState,
+    setLoading,
   } = useContext(DataContext);
   return (
     <Container>
@@ -109,9 +121,10 @@ const Header = () => {
             const selectedOption = e.target.value;
             setChangeState((statePrev) => !statePrev);
             setSelected(selectedOption);
+            setLoading(true);
           }}
         >
-          <option value=""></option>
+          <option value="">Choose your type</option>
           <option value="Mousepad">Mousepad</option>
           <option value="Monitor">Monitor</option>
           <option value="Keyboard">Keyboard</option>

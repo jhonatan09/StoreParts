@@ -30,7 +30,7 @@ const Content = ({ name, type, price }: Contexts) => {
     <Ul>
       <li>{name}</li>
       <li>{type}</li>
-      <li>{price}</li>
+      <li>${price.slice(0, -1)}</li>
     </Ul>
   );
 };
